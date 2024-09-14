@@ -341,11 +341,16 @@ h2 {
   }
 }
 
-.navbar__link:is(:hover, :focus-visible) {
-  opacity: 0.9;
+.navbar__link::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, var(--gradient-3), var(--gradient-4) 80%);
+  opacity: 0;
   transition: ease-in 0.25s;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+}
+.navbar__link:is(:hover, :focus-visible)::after {
+  opacity: 1;
 }
 
 .hero {
