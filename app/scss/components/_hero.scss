@@ -1,0 +1,51 @@
+
+@use '../globals/utilities' as u;
+@use '../globals/variables' as var;
+
+.hero {
+    background-color: var(--bg-2);
+}
+
+.hero__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+    grid-template-areas: 
+    "image"
+    "text"
+    ;
+
+    @include u.breakpoint(large) {
+        grid-template-columns: 1fr 1fr;
+        justify-items: initial;
+        gap: 120px;
+        grid-template-areas: 
+        "text image"
+        ;
+
+    }
+}
+
+.hero__image {
+    grid-area: image;
+}
+
+.hero__text {
+    grid-area: text;
+}
+
+.hero__heading {
+    font-size: clamp(var(--fs-1000), 1.94rem + 3.41vw, var(--fs-1200));
+}
+
+.hero__intro {
+    font-size: clamp(var(--fs-600), 1.41rem + 0.45vw, var(--fs-700));
+}
+
+.hero__links {
+    --flow-space: var(--space-600);
+    display: flex;
+    gap: 20px;
+}
+

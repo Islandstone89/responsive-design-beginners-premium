@@ -1,0 +1,36 @@
+
+@use '../globals/utilities' as u;
+@use '../globals/variables' as var;
+
+.fw-cta {
+    text-align: center;
+    background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 75%, var(--gradient-3) 150%);
+
+    @include u.breakpoint(large) {
+        background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 55%, var(--gradient-3) 110%);
+    }
+}
+
+.fw-cta__text {
+    font-size: clamp(var(--fs-600), 1.43rem + 0.35vw, var(--fs-700));
+}
+
+/* .fw-cta__link {
+    --flow-space: var(--space-600);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    transition: ease-in-out .25s;
+
+    &:is(:hover, :focus-visible) {
+        opacity: .9;
+    }
+} */
+
+ .fw-cta__link {
+    --flow-space: var(--space-700);
+    @include u.btn(var(--clr-light), var(--clr-light), var(--clr-dark));
+
+    &:is(:hover, :focus-visible) {
+        opacity: .9;
+    }
+ }
