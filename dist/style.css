@@ -532,12 +532,32 @@ h2 {
 
 .testimonial__content {
   --flow-space: var(--space-700);
+  position: relative;
 }
 
 .quote-wrapper {
   font-weight: var(--fw-bold);
   line-height: 1.25;
   font-size: clamp(var(--fs-600), 1.28rem + 1.07vw, var(--fs-800));
+}
+
+@media (width > 68.75rem) {
+  .testimonial__icon-1 {
+    position: absolute;
+    translate: calc(-100% - 40px) -30px;
+  }
+}
+
+.testimonial__icon-2 {
+  display: none;
+}
+@media (width > 68.75rem) {
+  .testimonial__icon-2 {
+    display: block;
+    position: absolute;
+    left: calc(100% + 40px);
+    translate: 0 calc(-10px - 100%);
+  }
 }
 
 .testimonial__author__wrapper {
