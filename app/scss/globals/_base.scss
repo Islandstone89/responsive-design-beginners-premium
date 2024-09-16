@@ -20,11 +20,11 @@ body {
 }
 
 h1 {
-    font-size: clamp(var(--fs-1000), 1.94rem + 3.40vw, var(--fs-1200));
+    font-size: clamp(var(--fs-1000), 1.94rem + 3.40vw, var(--fs-1300));
 }
 
 h2 {
-    font-size: clamp(var(--fs-800), 1.97rem + 1.38vw, var(--fs-1100));
+    font-size: clamp(var(--fs-800), 1.97rem + 1.38vw, var(--fs-1200));
 }
 
 /* .btn {
@@ -64,7 +64,7 @@ h2 {
 } */
 
 .btn__primary {
-    @include u.btn(var(--clr-accent), var(--clr-accent), var(--clr-dark));
+    @include u.btn(var(--clr-accent-100), var(--clr-accent-100), var(--clr-dark));
 
     &:is(:hover, :focus-visible) {
         opacity: .9;
