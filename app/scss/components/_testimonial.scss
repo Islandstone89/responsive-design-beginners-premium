@@ -3,9 +3,8 @@
 
 .testimonial__wrapper {
     @include u.breakpoint(large) {
-        padding-inline: var(--space-900);
+        padding-inline: var(--space-1000);
     }
-    
 }
 
 .testimonial__content {

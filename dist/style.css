@@ -118,6 +118,7 @@ textarea:not([rows]) {
   --size-60: 3.75rem;
   --size-72: 4.5rem;
   --size-80: 5rem;
+  --size-120: 7.5rem;
   /* SEMANTIC PROPERTIES */
   --bg-1: var(--clr-white);
   --bg-2: var(--clr-blue);
@@ -155,6 +156,7 @@ textarea:not([rows]) {
   --space-700: var(--size-40);
   --space-800: var(--size-60);
   --space-900: var(--size-80);
+  --space-1000: var(--size-120);
 }
 
 /* UTILITIES */
@@ -526,7 +528,7 @@ h2 {
 
 @media (width > 56.25rem) {
   .testimonial__wrapper {
-    padding-inline: var(--space-900);
+    padding-inline: var(--space-1000);
   }
 }
 
