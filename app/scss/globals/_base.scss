@@ -27,6 +27,10 @@ h2 {
     font-size: clamp(var(--fs-800), 1.97rem + 1.38vw, var(--fs-1200));
 }
 
+:is(label, input) {
+    display: block;
+}
+
 /* .btn {
     --outline-clr: var(--clr-light);
     --bg-clr: transparent;

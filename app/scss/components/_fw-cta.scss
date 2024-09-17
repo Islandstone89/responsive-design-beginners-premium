@@ -15,22 +15,47 @@
     font-size: clamp(var(--fs-600), 1.43rem + 0.35vw, var(--fs-700));
 }
 
-/* .fw-cta__link {
-    --flow-space: var(--space-600);
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
-    transition: ease-in-out .25s;
+.form {
+    --flow-space: var(--space-700);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-500);
+
+    @include u.breakpoint(medium) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form__input__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-200);
+}
+
+.form__label {
+    font-size: var(--fs-300);
+    text-align: initial;
+}
+
+.form__input {
+    border-radius: 5px;
+    padding: var(--space-200) var(--space-500);
+    border: transparent;
+}
+
+ .form__button {
+    @include u.btn(transparent, var(--clr-light), var(--clr-dark));
+    font-size: var(--fs-300);
+    cursor: pointer;
+    align-self: center;
 
     &:is(:hover, :focus-visible) {
         opacity: .9;
     }
-} */
 
- .fw-cta__link {
-    --flow-space: var(--space-700);
-    @include u.btn(var(--clr-light), var(--clr-light), var(--clr-dark));
-
-    &:is(:hover, :focus-visible) {
-        opacity: .9;
+    @include u.breakpoint(medium) {
+        align-self: flex-end;
     }
  }
