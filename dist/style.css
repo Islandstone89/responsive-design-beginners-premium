@@ -654,6 +654,7 @@ h2 {
   font-size: var(--fs-300);
   cursor: pointer;
   align-self: center;
+  border: transparent;
 }
 .form__button:is(:hover, :focus-visible) {
   opacity: 0.9;
